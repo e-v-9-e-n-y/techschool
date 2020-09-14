@@ -13,7 +13,8 @@ public class Task1p2 {
                 if (currDivisor > value) {
                     break;
                 }
-                int currDig = (value / currDivisor ) % 10; ;
+                int currDig = (value / currDivisor) % 10;
+                ;
                 sumTotal += currDig;
                 currDivisor *= 10;
             }

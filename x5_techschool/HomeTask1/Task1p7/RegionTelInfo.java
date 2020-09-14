@@ -13,8 +13,8 @@ public class RegionTelInfo {
         this.regDivisor = regDivisor;
     }
 
-    public double getCost(int pMinuteCount) {
-        return  (double)pMinuteCount * regPrice / regDivisor;
+    public double getCost(int minuteCount) {
+        return (double) minuteCount * regPrice / regDivisor;
     }
 
     public String getRegName() {

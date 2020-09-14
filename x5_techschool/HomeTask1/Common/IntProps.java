@@ -3,33 +3,30 @@ package Common;
 public class IntProps {
 
     // определение знака числа
-    public static int getSign(int pValue) {
-        if (pValue == 0) {
+    public static int getSign(int value) {
+        if (value == 0) {
             return 0;
-        }
-        else if (pValue > 0) {
+        } else if (value > 0) {
             return 1;
-        }
-        else return -1;
+        } else return -1;
     }
 
     // определение чётности/нечётности числа
-    public static boolean isEven(int pValue) {
-        if ((pValue % 2) == 0) {
+    public static boolean isEven(int value) {
+        if ((value % 2) == 0) {
             return true;
-        }
-        else return false;
+        } else return false;
     }
 
     // описание числа
-    public static String getDescription(int pValue) {
+    public static String getDescription(int value) {
         //Ввести целое число в консоли. Вывести его строку-
         //описание вида «отрицательное четное число»,
         //«нулевое число», «положительное нечетное число» и
         //т. д.
         final String DigitCaption = " число";
         StringBuilder stringBuilder = new StringBuilder();
-        switch (IntProps.getSign(pValue)) {
+        switch (IntProps.getSign(value)) {
             case (0):
                 return "нулевое" + DigitCaption;
 //                break;
@@ -41,12 +38,12 @@ public class IntProps {
                 break;
         }
 
-        if (IntProps.isEven(pValue) == true) {
+        if (IntProps.isEven(value)) {
             stringBuilder.append(" четное");
         } else {
             stringBuilder.append(" нечетное");
         }
         stringBuilder.append(DigitCaption);
-        return  stringBuilder.toString();
+        return stringBuilder.toString();
     }
 }
