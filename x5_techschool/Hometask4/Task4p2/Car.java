@@ -1,10 +1,10 @@
 package Task4p2;
 
 public abstract class Car {
-    String model;
-    String carClass;
-    int weigth;
-    Engine motor;
+    protected String model;
+    protected String carClass;
+    protected int weigth;
+    protected Engine motor;
 
     public Car(String model, String carClass, int weigth, String manufacturer, int power) {
         this.model = model;
@@ -35,5 +35,37 @@ public abstract class Car {
                 ", weigth=" + weigth +
                 ", motor=" + motor +
                 '}';
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public String getCarClass() {
+        return carClass;
+    }
+
+    public void setCarClass(String carClass) {
+        this.carClass = carClass;
+    }
+
+    public int getWeigth() {
+        return weigth;
+    }
+
+    public void setWeigth(int weigth) {
+        this.weigth = weigth;
+    }
+
+    public Engine getMotor() {
+        return motor;
+    }
+
+    public void setMotor(Engine motor) {
+        this.motor = motor;
     }
 }
