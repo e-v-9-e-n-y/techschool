@@ -4,13 +4,13 @@ public class Rectangle implements Shape {
     private double a;
     private double h;
 
-    public Rectangle() {
-        this.a = 10;
-        this.h = 4.5;
+    public Rectangle(double a, double h) {
+        this.a = a;
+        this.h = h;
     }
 
     @Override
     public double square() {
-        return a * h ;
+        return a * h;
     }
 }

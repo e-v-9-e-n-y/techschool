@@ -4,9 +4,9 @@ public class Triangle implements Shape {
     private double a;
     private double h;
 
-    public Triangle() {
-        this.a = 10;
-        this.h = 4.5;
+    public Triangle(double a, double h) {
+        this.a = a;
+        this.h = h;
     }
 
     @Override

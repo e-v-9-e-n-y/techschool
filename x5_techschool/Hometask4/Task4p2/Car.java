@@ -1,10 +1,10 @@
 package Task4p2;
 
 public abstract class Car {
-    protected String model;
-    protected String carClass;
-    protected int weigth;
-    protected Engine motor;
+    private String model;
+    private String carClass;
+    private int weigth;
+    private Engine motor;
 
     public Car(String model, String carClass, int weigth, String manufacturer, int power) {
         this.model = model;
