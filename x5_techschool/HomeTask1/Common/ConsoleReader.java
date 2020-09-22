@@ -9,6 +9,7 @@ public class ConsoleReader {
         String userInput = in.nextLine();
         return Integer.parseInt(userInput);
     }
+
     public static String ReadString(String greetingStr) {
         System.out.println(greetingStr);
         Scanner in = new Scanner(System.in);

@@ -35,7 +35,7 @@ public class Task1p8 {
                     cntNegative++;
 
                     // проверка чётности/нечётности числа
-                    if ((value % 2) == 0) {
+                    if (value % 2 == 0) {
                         // сумма четных отрицательных элементов
                         sumNegativeEven = sumNegativeEven + value;
                     }

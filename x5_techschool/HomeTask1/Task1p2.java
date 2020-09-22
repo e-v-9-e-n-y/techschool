@@ -14,7 +14,7 @@ public class Task1p2 {
                     break;
                 }
                 int currDig = (value / currDivisor) % 10;
-                ;
+
                 sumTotal += currDig;
                 currDivisor *= 10;
             }

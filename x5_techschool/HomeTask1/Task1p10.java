@@ -7,8 +7,7 @@ public class Task1p10 {
         int[] targetValues = new int[sourceValues.length];
         int targetCnt = 0;
 
-        for (int value : sourceValues
-        ) {
+        for (int value : sourceValues) {
             if (value != 0) {
                 targetValues[targetCnt] = value;
                 targetCnt += 1;

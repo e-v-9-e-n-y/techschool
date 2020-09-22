@@ -8,14 +8,18 @@ public class IntProps {
             return 0;
         } else if (value > 0) {
             return 1;
-        } else return -1;
+        } else {
+            return -1;
+        }
     }
 
     // определение чётности/нечётности числа
     public static boolean isEven(int value) {
-        if ((value % 2) == 0) {
+        if (value % 2 == 0) {
             return true;
-        } else return false;
+        } else {
+            return false;
+        }
     }
 
     // описание числа
