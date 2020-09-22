@@ -6,6 +6,15 @@ public abstract class Animal {
         this.location = location;
     }
 
+    // любимое лакомство животного
+    private String food;
+    // где живёт животное
+    private String location;
+
+    protected abstract String animalKind();
+
+    protected abstract String soundlKind();
+
     public String getFood() {
         return food;
     }
@@ -13,15 +22,6 @@ public abstract class Animal {
     public String getLocation() {
         return location;
     }
-
-    // любимое лакомство животного
-    protected String food;
-    // где живёт животное
-    protected String location;
-
-    protected abstract String animalKind();
-
-    protected abstract String soundlKind();
 
     public void makeNoise() {
         System.out.println(animalKind() + " " + soundlKind());

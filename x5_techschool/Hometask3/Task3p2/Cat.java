@@ -1,9 +1,13 @@
 package Task3p2;
 
 public class Cat extends Animal {
-    public Cat(String food, String location) {
+    public Cat(String food, String location, boolean canCatchMice) {
         super(food, location);
+        this.canCatchMice = canCatchMice;
     }
+
+    // умеет ли кошка ловить мышей
+    private boolean canCatchMice;
 
     @Override
     protected String animalKind() {
@@ -15,6 +19,7 @@ public class Cat extends Animal {
         return "мяукает";
     }
 
-    // умеет ли кошка ловить мышей
-    private boolean  canCatchMice;
+    public boolean isCanCatchMice() {
+        return canCatchMice;
+    }
 }

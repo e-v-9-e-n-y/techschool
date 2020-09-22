@@ -27,8 +27,8 @@ public class Phone {
     }
 
     public void sendMessage(String... numbers) {
-        for (String num: numbers
-             ) {
+        for (String num : numbers
+        ) {
             System.out.println("Отправка сообщения на номер " + num);
         }
     }

@@ -1,9 +1,17 @@
 package Task3p2;
 
 public class Dog extends Animal {
-    public Dog(String food, String location) {
+    public Dog(String food, String location, boolean trained, boolean canGuard) {
         super(food, location);
+        this.trained = trained;
+        this.canGuard = canGuard;
     }
+
+    // собака прошла курс дрессировки ?
+    private boolean trained;
+
+    // собака умеет сторожить дом ?
+    private boolean canGuard;
 
     @Override
     protected String animalKind() {
@@ -15,9 +23,11 @@ public class Dog extends Animal {
         return "лает";
     }
 
-    // собака прошла курс дрессировки ?
-    private boolean trained;
+    public boolean isTrained() {
+        return trained;
+    }
 
-    // собака умеет сторожить дом ?
-    private boolean canGuard;
+    public boolean isCanGuard() {
+        return canGuard;
+    }
 }

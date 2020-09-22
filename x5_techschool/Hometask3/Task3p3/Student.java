@@ -1,9 +1,9 @@
 package Task3p3;
 
 public class Student {
-    protected String firstName;
-    protected String lastName;
-    protected String group;
+    private String firstName;
+    private String lastName;
+    private String group;
     protected double averageMark;
 
     public Student(String firstName, String lastName, String group, double averageMark) {
