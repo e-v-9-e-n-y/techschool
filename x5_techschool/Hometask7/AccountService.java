@@ -19,7 +19,7 @@ public abstract class AccountService {
                 setAccount(account);
             }
         } catch (IOException e) {
-            throw new UnknownAccountException();
+            throw new UnknownAccountException(e.getMessage());
         }
     }
 
@@ -29,7 +29,7 @@ public abstract class AccountService {
             Account account = getAccount(accountId);
             System.out.println(account.getAmount());
         } catch (Exception e) {
-            throw new UnknownAccountException();
+            throw new UnknownAccountException(e.getMessage());
         }
     }
 
@@ -41,7 +41,7 @@ public abstract class AccountService {
             account.setAmount(balance + amount);
             setAccount(account);
         } catch (IOException e) {
-            throw new UnknownAccountException();
+            throw new UnknownAccountException(e.getMessage());
         }
     }
 
@@ -63,7 +63,7 @@ public abstract class AccountService {
                     setAccount(accountFrom);
                 }
             } catch (IOException e) {
-                throw new UnknownAccountException();
+                throw new UnknownAccountException(e.getMessage());
             }
         }
     }
