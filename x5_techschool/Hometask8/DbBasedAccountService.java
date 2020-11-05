@@ -1,5 +1,8 @@
 import java.io.IOException;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class DbBasedAccountService extends AccountService {
     private Connection connection;
@@ -15,7 +18,7 @@ public class DbBasedAccountService extends AccountService {
     }
 
     @Override
-    public Account getAccount(int accountId) throws IOException {
+    public Account getAccount(int accountId) throws IOException, UnknownAccountException {
         try (PreparedStatement statement = connection.prepareStatement(sqlGetAccount);
         ) {
             statement.setInt(1, accountId);
@@ -30,8 +33,8 @@ public class DbBasedAccountService extends AccountService {
             }
         } catch (SQLException | UnknownAccountException e) {
             e.printStackTrace();
+            throw new UnknownAccountException("Ошибка получения аккаута[accountID = " + accountId + "]" + e.getMessage());
         }
-        return null;
     }
 
     @Override

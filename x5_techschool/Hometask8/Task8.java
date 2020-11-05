@@ -19,6 +19,5 @@ public class Task8 {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-
     }
 }

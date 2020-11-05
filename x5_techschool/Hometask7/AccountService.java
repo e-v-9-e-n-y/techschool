@@ -1,7 +1,7 @@
 import java.io.IOException;
 
 public abstract class AccountService {
-    public abstract Account getAccount(int accountId) throws IOException;
+    public abstract Account getAccount(int accountId) throws IOException, UnknownAccountException;
 
     public abstract void setAccount(Account account);
 
